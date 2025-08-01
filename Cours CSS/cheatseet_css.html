@@ -10,12 +10,76 @@
     ## Selecteurs
 
 ### Théorie
-''' CSS'
-.classe               /*Sélectionne par classe*/
+``` CSS
+.classe                     /*Sélectionne par classe*/
 #id                         /*Sélectionne par ID*/
 élément                     /*Sélectionne par type d'élément*/
 element.classe              /*Element avec une classe spécifique*/
 élément#id                  /*Element avec un ID spécifique*/
 *                           /*Sélécteur universel*/
+
+## Flexbox
+
+### Théorie
+diplay: flex;
+flex-direction: row|column|row-reverse|column-reverse;
+justify-content: flex-start|flex-end|center|space-between|space-around;
+align-items: flex-start|flex-end|center|baseline|stretch;
+flex-wrap: nowrap|wrap|wrap-reverse;
+flex:1;         /*grow |shrink |basis*/
+
+## Grid
+
+### Théorie
+``` CSS
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 20px;
+
+## Box Model
+
+### Théorie
+``` CSS
+margin:10px;                                    /*Espace extérieur*/
+padding:10px;                                   /*Espace intérieur*/
+border: 1px solid black;                         /*Bordure*/
+
+## Animation
+
+### Théorie
+``` CSS
+@keyframes nomAnimation{
+    0% { opacity:0;}
+    100% { opacity:1;}
+}
+## Variable css
+
+### Théorie
+``` CSS
+:root {
+    --couleur-principale: #007bff;
+}
+## Media Queries
+
+###Théorie
+``` CSS
+@media screen and (max-width: 768px) {
+    /* Styles mobile */
+}
+## Transformation
+
+###Théorie
+``` CSS
+transform: rotate(45deg)
+transform: scale(1.5);
+
+## Effets
+
+### Théorie
+``` CSS
+box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+filter: blur(5px);
+```
+
 </body>
 </html>

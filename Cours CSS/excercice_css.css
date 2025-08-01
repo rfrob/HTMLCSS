@@ -1,0 +1,172 @@
+/*Excercices1*/
+/*1.Séléctionner uniquement les paragraphes avec la classe "texte"*/
+p.texte{
+    color: blue;
+}
+/*2.Séléctionner tous les éléments avec la classe "texte"*/
+.texte{
+    font-weight: bold;
+}
+/*3.Séléctionner le titre principale*/
+#titre-principale{
+    font-size: 24px;;
+}
+/* Excercices 2*/
+/* créér un ligne de boxes centrées horizontalement */
+.flex-container {
+    display: flex;                                  /*active flexbox*/
+    justify-content: center;                    /*centre les éléments horizontalement*/
+    gap: 10px;                               /* espace entre les éléments*/   
+}
+.box{
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    display: flex;  
+    justify-content: center;                         /*centré le numero*/
+    align-items: center;                            /*centre les éléments verticalement*/
+    color :#fefefe;
+}
+/*Excercices 3*/
+/* Créér une grille responsive de 2x2 qui devient 1x4 sur mobile */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*2 colonnes par defaut*/
+    gap: 10px;
+}
+.grid-item {
+    background-color: #2ecc71;
+    padding: :20px;
+    text-align: center;
+    color:#fefefe;
+}
+/* responsive  une seule colonne sur mobile */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;/*1 colonne sur mobile*/
+    }
+}
+/*Excercices 4*/
+/* créér une carte avec padding et margin*/
+.card{
+    width: 200px;                                                    /*largeur fixe de la carte*/ 
+    padding: 20px;                                                   /*espace interieur*/
+    margin: 20px auto;                                               /*auto pour centrer horizontalement*/
+    border:1px solid #ddd;                                        /*bordure fine*/
+    border-radius: 8px;                                             /*coins arrondis*/    
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);                        /*ombre légère*/
+}
+/*Excercices 5*/
+/* créér un bouton avec effet en survolanimé*/
+.btn-anime{
+    padding: 10px 20px;                                       /*padding pour le bouton*/
+    background-color: #3498db;                                    /*couleur de fond*/
+    color: #fff;                                                   /*couleur du texte*/
+    border: none;                                                 /*pas de soulignement*/
+    border-radius: 4px;                                           /*coins arrondis*/
+    transition: all 0.3s ease;                                   /*transition pour l'effet hover*/
+}
+.btn-anime:hover{
+    background-color: #e74c3c;                                    /*couleur de fond au survol*/
+    transform: scale(1.1);                                       /*agrandissement léger*/
+   
+} 
+/*Excercices 6*/
+/* créér un theme  cohérent avec des variables css */
+:root{
+    --couleur-primaire: #34db45;                               
+    --couleur-texte: #333;                               
+    --espacement: 16px;                                       
+}
+.theme-container{
+    color:var(--couleur-texte);
+    padding: var(--espacement);
+}
+.theme-container h2{
+    color: var(--couleur-primaire);                                
+    margin-bottom: var(--espacement);                                 
+}
+
+.theme-container button{
+    background-color: var(--couleur-primaire);                   
+    color: #fff;                                                 
+    padding: calc(var(--espacement)/2);                               
+    border: none;                                                
+    border-radius: 4px;                                          
+}
+
+/*excercices 7*/
+/* créér une navigation qui s'adapte aux mobiles */
+.nav-responsive{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fa15c1;                                
+}  
+@media (max-width:600px) {
+    .nav-responsive {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*Excercices 8*/
+/* créér une carte qui se retourne au survol */
+.card-flip {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    perspective: 1000px; /*effet 3d*/
+}
+.card-front, .card-back {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3498db;
+    color: #fff;
+    
+}
+.card-back{
+    background-color: #2ecc71;
+    transform: rotateY(180deg);                     /*face arriere retourné*/
+}
+.card-flip:hover .card-front {
+    transform: rotateY(180deg);                     /*retourne la face avant*/
+}
+.card-flip:hover .card-back {
+    transform: rotateY(360deg);                       /*affiche la face arriere*/
+}
+/*Excercices 9*/
+/* Creer un modal avec fond flouté */
+.modal-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.modal-content{
+    background: #fefefe;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 2;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.modal-backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5); /*fond semi-transparent*/
+    backdrop-filter: blur(5px); /*flou de fond*/
+    z-index: 1; /*derrière le contenu du modal*/
+}
