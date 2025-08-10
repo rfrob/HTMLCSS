@@ -1,0 +1,67 @@
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu {
+    width: 100%;
+    height: 60px;
+    background-color: #0d0517;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    font-family:'cascadia code', Times, serif;
+}
+.titre{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    font-size:20px;
+    align-items: center;
+    justify-content: center;
+    color:blue
+}
+#sur-moi {
+    text-align: justify;
+    padding: 50px;
+}
+.présentation{
+    display: flex;
+    flex-direction: column;
+    align-items: vertical;
+    justify-content: center;
+    width: 50%;
+    font-family: 'arial', sans-serif;
+}
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #0db8e7;
+    justify-content: center;
+}
+.image{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50%;
+    block-size: 100%;
+  
+}
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(7, 7, 239, 0.93);
+
+}
+#compétences{
+    text-align: center;
+    padding: 50px;
+    font-family: 'arial', sans-serif;
+    margin-right: 20%;
+
+}
