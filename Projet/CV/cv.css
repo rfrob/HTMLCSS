@@ -2,6 +2,7 @@
     margin : 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 .menu {
     width: 100%;
@@ -10,7 +11,7 @@
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     list-style: none;
     font-family:'cascadia code', Times, serif;
 }
@@ -30,10 +31,12 @@
 .présentation{
     display: flex;
     flex-direction: column;
-    align-items: vertical;
+    align-items: flex-start;
     justify-content: center;
     width: 50%;
     font-family: 'arial', sans-serif;
+    margin-left: 50px;
+    padding: 5px;
 }
 h3 {
     font-size: 24px;
@@ -63,4 +66,35 @@ h3 {
     text-align: center;
     padding: 50px;
     font-family: 'arial', sans-serif;
+    margin-right: 30%;
+    padding: 10px;
+
 }
+#expériences{
+    text-align: center;
+    padding: 50px;
+    font-family: 'arial', sans-serif;
+    margin-right: 30%;
+    padding: 10px;
+}
+#diplômes{
+    text-align: center;
+    padding: 50px;
+    font-family: 'arial', sans-serif;
+    margin-right: 30%;
+    padding: 10px;
+}
+#langues{
+    text-align: center;
+    padding: 50px;
+    font-family: 'arial', sans-serif;
+    margin-right: 30%;
+    padding: 10px;
+}
+.reseau{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.copyrigth
